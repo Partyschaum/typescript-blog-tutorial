@@ -1,0 +1,6 @@
+/node_modules/
+/coverage/
+/src/*.js
+/src/*.map
+
+.DS_Store
