@@ -8,21 +8,21 @@ export default class ArticleRepository {
     this.articles = []
   }
 
-  public save(article: Article) {
+  public save(article: Article): void {
     this.articles.push(article)
   }
 
-  public findByAuthor(author: Author) {
+  public findByAuthor(author: Author): Article[] {
     return this.articles.filter((item) => {
       return item.author === author
     })
   }
 
-  public findAll() {
+  public findAll(): Article[] {
     return this.articles
   }
 
-  public delete(article: Article) {
+  public delete(article: Article): void {
     this.articles.splice(this.articles.indexOf(article), 1)
   }
 }

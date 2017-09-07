@@ -7,21 +7,21 @@ export default class AuthorRepository {
     this.authors = []
   }
 
-  public save(author: Author) {
+  public save(author: Author): void {
     this.authors.push(author)
   }
 
-  public findBySurname(surname: string) {
+  public findBySurname(surname: string): Author[] {
     return this.authors.filter((item) => {
       return item.surname === surname
     })
   }
 
-  public findAll() {
+  public findAll(): Author[] {
     return this.authors
   }
 
-  public delete(author: Author) {
+  public delete(author: Author): void {
     this.authors.splice(this.authors.indexOf(author), 1)
   }
 }
